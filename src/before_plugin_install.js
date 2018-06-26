@@ -26,7 +26,7 @@ module.exports = function(ctx) {
 
   return Q.Promise(function(resolve, reject, notify) {
     var exec = require('child_process').exec;
-    exec('npm install xml2js minimist --save 2>&1', function(err, stdout) {
+    exec('yarn add xml2js minimist 2>&1', function(err, stdout) {
       if (err) {
         reject(err);
       } else {
