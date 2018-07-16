@@ -805,7 +805,7 @@ MarkerCluster.prototype._redraw = function(params) {
     delete self._clusters[prevResolution];
   } else {
     //console.log("-----> initialize");
-    keys = Object.keys(self._markerMap);
+    keys = Object.keys(self._markerMap || {});
     keys.forEach(function(markerId) {
       if (self._stopRequest ||
           self._isRemoved) {
