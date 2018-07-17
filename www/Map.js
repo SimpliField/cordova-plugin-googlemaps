@@ -1276,6 +1276,9 @@ Map.prototype.addMarker = function(markerOptions, callback) {
   });
 
   self.exec.call(self, function(result) {
+    if(!marker) {
+      return;
+    }
 
     markerOptions.icon.size = markerOptions.icon.size || {};
     markerOptions.icon.size.width = markerOptions.icon.size.width || result.width;
